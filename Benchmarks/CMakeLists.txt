@@ -3,4 +3,4 @@ project(Benchmarks)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Benchmarks main.cpp Layer.h Weights.h NNUtils.h)
+add_executable(ML_Benchmark main.cpp Layer.h Weights.h )

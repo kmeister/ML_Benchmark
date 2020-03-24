@@ -52,5 +52,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Benchmarks.dir/DependInfo.cmake"
+  "CMakeFiles/ML_Benchmark.dir/DependInfo.cmake"
   )

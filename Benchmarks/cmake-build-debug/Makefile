@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Benchmarks
+# Target rules for targets named ML_Benchmark
 
 # Build rule for target.
-Benchmarks: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Benchmarks
-.PHONY : Benchmarks
+ML_Benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ML_Benchmark
+.PHONY : ML_Benchmark
 
 # fast build rule for target.
-Benchmarks/fast:
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/build
-.PHONY : Benchmarks/fast
+ML_Benchmark/fast:
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/build
+.PHONY : ML_Benchmark/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Benchmarks"
+	@echo "... ML_Benchmark"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

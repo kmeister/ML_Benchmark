@@ -53,12 +53,12 @@ CMAKE_BINARY_DIR = /Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/cmake-bu
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Benchmarks.dir/all
+all: CMakeFiles/ML_Benchmark.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Benchmarks.dir/clean
+clean: CMakeFiles/ML_Benchmark.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +68,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/Benchmarks.dir
+# Target rules for target CMakeFiles/ML_Benchmark.dir
 
 # All Build rule for target.
-CMakeFiles/Benchmarks.dir/all:
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/depend
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Benchmarks"
-.PHONY : CMakeFiles/Benchmarks.dir/all
+CMakeFiles/ML_Benchmark.dir/all:
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/depend
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ML_Benchmark"
+.PHONY : CMakeFiles/ML_Benchmark.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Benchmarks.dir/rule: cmake_check_build_system
+CMakeFiles/ML_Benchmark.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Benchmarks.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ML_Benchmark.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Benchmarks.dir/rule
+.PHONY : CMakeFiles/ML_Benchmark.dir/rule
 
 # Convenience name for target.
-Benchmarks: CMakeFiles/Benchmarks.dir/rule
+ML_Benchmark: CMakeFiles/ML_Benchmark.dir/rule
 
-.PHONY : Benchmarks
+.PHONY : ML_Benchmark
 
 # clean rule for target.
-CMakeFiles/Benchmarks.dir/clean:
-	$(MAKE) -f CMakeFiles/Benchmarks.dir/build.make CMakeFiles/Benchmarks.dir/clean
-.PHONY : CMakeFiles/Benchmarks.dir/clean
+CMakeFiles/ML_Benchmark.dir/clean:
+	$(MAKE) -f CMakeFiles/ML_Benchmark.dir/build.make CMakeFiles/ML_Benchmark.dir/clean
+.PHONY : CMakeFiles/ML_Benchmark.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

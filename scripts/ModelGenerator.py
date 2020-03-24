@@ -160,11 +160,13 @@ def main():
 
     model = generate_model(trainX, trainy, input_size=args.n_features, layer_1_neurons=args.layer1, layer_2_neurons=args.layer2, layer_3_neurons=args.n_classes)
 
-    evaluate_model(model, trainX, testX, trainy, testy)
+
 
     write_header(testX, model, args.headerfile)
 
     dump_all(model, testX)
+
+    evaluate_model(model, trainX, testX, trainy, testy)
 
 if __name__ == "__main__":
     main()
