@@ -14,7 +14,7 @@ To build the benchmark, make sure you generate a Weights.h file in the Benchmark
 cd scripts
  ./ModelGenerator.py ../Benchmarks/Weights.h
  ```
-use
+use the following to see what options exist for configuring your model
 ```
-./ModelGenerator.py -h to see what options exist for configuring your model
+./ModelGenerator.py -h 
 ```
