@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/Layer.h
+iostream
+-
+Weights.h
+/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/Weights.h
+math.h
+-
+assert.h
+-
+
+/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/Weights.h
+
+/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/main.cpp
+iostream
+-
+Weights.h
+/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/Weights.h
+Layer.h
+/Users/kurt/Documents/ECE562/ML_Benchmark/Benchmarks/Layer.h
+assert.h
+-
+
