@@ -1,3 +1,4 @@
 Benchmarks/.idea/*
 scripts/.idea/*
 Benchmarks/cmake-build-debug/*
+Benchmarks/weights.h
