@@ -7,3 +7,14 @@ the package contains a script called GenerateModel.py can generate an MLP with 3
 The benchmark folder contains a c++ class Layer, which can use the generated header file to run predictions on the test data
 
 compile without the "DEBUG" declaration to create a version with no outputs to stderr or stdout for embedded applications
+
+# To Build 
+To build the benchmark, make sure you generate a Weights.h file in the Benchmark file first...
+```
+cd scripts
+ ./ModelGenerator.py ../Benchmarks/Weights.h
+ ```
+use
+```
+./ModelGenerator.py -h to see what options exist for configuring your model
+```
