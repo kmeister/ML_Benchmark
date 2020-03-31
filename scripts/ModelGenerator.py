@@ -68,7 +68,7 @@ def generate_model(trainX, trainy, input_size=3, layer_1_neurons = 10, layer_2_n
     opt = SGD(lr=0.01, momentum=0.9)
     model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
     # fit model
-    model.fit(trainX, trainy, epochs=n_epochs, verbose=verbose)
+    model.fit(trainX, trainy, epochs=n_epochs, batch_size=int(np.max((1, int(trainX.size*.1)))), verbose=verbose)
 
     if verbose:
         model.summary()
