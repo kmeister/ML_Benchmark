@@ -28,7 +28,7 @@ SOFTWARE.
 
 #include "Weights.h"
 #include <math.h>
-#define DEBUG
+
 #ifdef DEBUG
 #include <assert.h>
 #endif

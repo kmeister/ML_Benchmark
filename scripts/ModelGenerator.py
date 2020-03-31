@@ -54,7 +54,7 @@ def generate_data(n_samples=10000, n_classes=2, n_features=3, test_ratio=0.25):
     return trainX, testX, trainy, testy
 
 
-def generate_model(trainX, trainy, input_size=3, layer_1_neurons = 10, layer_2_neurons =5, layer_3_neurons = 2, verbose = 1):
+def generate_model(trainX, trainy, input_size=3, layer_1_neurons = 10, layer_2_neurons =5, layer_3_neurons = 2, verbose = 1, n_epochs = 100):
     # define the layers
     layer_1 = Dense(layer_1_neurons, activation='relu', kernel_initializer=keras.initializers.he_uniform(seed=42), input_shape=(input_size,))
     layer_2 = Dense(layer_2_neurons, activation='relu', kernel_initializer=keras.initializers.he_uniform(seed=43))
@@ -68,7 +68,7 @@ def generate_model(trainX, trainy, input_size=3, layer_1_neurons = 10, layer_2_n
     opt = SGD(lr=0.01, momentum=0.9)
     model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
     # fit model
-    model.fit(trainX, trainy, epochs=10, verbose=verbose)
+    model.fit(trainX, trainy, epochs=n_epochs, verbose=verbose)
 
     if verbose:
         model.summary()
@@ -177,19 +177,24 @@ def main():
     parser.add_argument("--n_features", type=int, help="the number of features in the input data", default = 3)
     parser.add_argument("--layer1", type=int, help ="the number of neurons in the 1st hidden layer", default = 10 )
     parser.add_argument("--layer2", type=int, help ="the number of neurons in the 2nd hidden layer", default = 5 )
+    parser.add_argument("--n_epochs", type=int, help ="the number of training epochs", default = 10 )
+
+    parser.add_argument("--dump_arrays", action="store_true", help="print tables to screen")
 
 
     args = parser.parse_args()
 
     trainX, testX, trainy, testy = generate_data(n_samples=int(args.test_size/0.25), n_classes=args.n_classes, n_features=args.n_features)
 
-    model = generate_model(trainX, trainy, input_size=args.n_features, layer_1_neurons=args.layer1, layer_2_neurons=args.layer2, layer_3_neurons=args.n_classes)
+    model = generate_model(trainX, trainy, input_size=args.n_features, layer_1_neurons=args.layer1,
+                           layer_2_neurons=args.layer2, layer_3_neurons=args.n_classes, n_epochs=args.n_epochs )
 
 
 
     write_header(testX, model, args.headerfile)
 
-    dump_all(model, testX)
+    if args.dump_arrays:
+        dump_all(model, testX)
 
     evaluate_model(model, trainX, testX, trainy, testy)
 
