@@ -37,7 +37,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.utils import to_categorical
 from tensorflow import keras
-from matplotlib import pyplot
+#from matplotlib import pyplot
 import numpy as np
 import datetime
 import argparse
