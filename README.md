@@ -30,7 +30,7 @@ build/RISCV/gem5.opt configs/example/se.py -c tests/test- progs/hello/bin/riscv/
 follow the remaining steps in hw1 to modify the se.py file
 
 ## 2. Install the RISCV Toolchain
-follow the instructions [here] (https://github.com/riscv/riscv-gnu-toolchain)
+follow the instructions here: https://github.com/riscv/riscv-gnu-toolchain
 
 ## 3. Clone this Repository and Build the Benchmark
 ```
