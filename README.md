@@ -8,9 +8,9 @@ The benchmark folder contains a c++ class Layer, which can use the generated hea
 
 compile without the "DEBUG" declaration to create a version with no outputs to stderr or stdout for embedded applications
 
-to run this benchmark in GEM5 using the RISCV ISA follow the following steps...
+# To run this benchmark in GEM5 using the RISCV ISA follow the following set of steps...
 
-# 1. build GEM5 for RISCV
+## 1. build GEM5 for RISCV
 start by installing dependencies:  
 ```
 sudo apt install build-essential
@@ -29,10 +29,10 @@ build/ARM/gem5.opt configs/example/se.py -c tests/test- progs/hello/bin/arm/linu
 ```
 follow the remaining steps in hw1 to modify the se.py file
 
-# 2. Install the RISCV Toolchain
+## 2. Install the RISCV Toolchain
 follow the instructions [here] (https://github.com/riscv/riscv-gnu-toolchain)
 
-# 3. clone this repository and build the benchmark
+## 3. Clone this Repository and Build the Benchmark
 ```
 cd ~
 git clone https://github.com/kmeister/ML_Benchmark
@@ -40,7 +40,7 @@ cd ML_Benchmark/benchmarks
 riscv64-unknown-linux-gnu-gcc -static -Wall -O0 -I. -c main.cpp -o main.o 
 riscv64-unknown-linux-gnu-g++ -static -Wall -L. -o mlbench main.o 
 ```
-# 4. Try running the benchmark...
+## 4. Try Running the Benchmark...
 ```
 cd ~/gem5
 build/RISCV/gem5.opt configs/example/se.py --cpu-type DerivO3CPU  -c  ../ML_Benchmark/Benchmarks/mlbench --caches --l1i_size=32kB --l1i_assoc=4 --l1d_size=32kB --l1d_assoc=4 --cacheline_size=64 --cpu-clock=1.6GHz --maxinsts=1000000
