@@ -25,7 +25,7 @@ scons build/RISCV/gem5.opt
 ```
 to test:   
 ```
-build/ARM/gem5.opt configs/example/se.py -c tests/test- progs/hello/bin/arm/linux/hello
+build/RISCV/gem5.opt configs/example/se.py -c tests/test- progs/hello/bin/riscv/linux/hello
 ```
 follow the remaining steps in hw1 to modify the se.py file
 
