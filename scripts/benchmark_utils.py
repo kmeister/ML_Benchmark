@@ -102,7 +102,7 @@ class BenchmarkCommandBuilder:
         str += f"--l1d_size={self._l1d_size}kB "
         str += f"--l1d_assoc={self._l1d_assoc} "
         str += f"--cacheline_size={self._cacheline_size} "
-        str += f"--l2_cache "
+        str += f"--l2cache "
         str += f"--l2_size={self._l2_size}kB "
         str += f"--l2_assoc={self._l2_assoc} "
         str += f"--cpu-clock=1.6GHz "
