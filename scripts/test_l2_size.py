@@ -11,7 +11,7 @@ print("generating commands")
 for size in l2_size:
     bench = BenchmarkCommandBuilder()\
         .set_stats_filename(f"l2size_{size}.txt")\
-        .set_config_filename(f"l2size_{l2_size}.ini")\
+        .set_config_filename(f"l2size_{size}.ini")\
         .set_l2_size(size).build()
     print(bench + "\n\n")
     commands.append(bench)
