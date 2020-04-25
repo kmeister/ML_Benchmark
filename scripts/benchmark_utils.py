@@ -91,7 +91,7 @@ class BenchmarkCommandBuilder:
         return self
 
     def build(self):
-        str =   "build/RICV/gem5.opt "
+        str =   "build/RISCV/gem5.opt "
         str += f"--stats-file={self._stats_filename:s} "
         str += f"--dump-config={self._config_filename:s} "
         str += f"configs/example/se.py "
