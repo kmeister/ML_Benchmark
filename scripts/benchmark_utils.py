@@ -39,7 +39,7 @@ class BenchmarkCommandBuilder:
         self._l2_size = 1024
         self._l2_assoc = 8
         self._cpu_type = "MinorCPU"
-        self._maxinsts=10000000
+        self._maxinsts=100000000
         self._benchmark_path= "../ML_Benchmark/Benchmarks/medbench"
 
     def set_stats_filename(self, value):
