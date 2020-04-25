@@ -101,7 +101,7 @@ class BenchmarkCommandBuilder:
         str += f"--l1i_assoc={self._l1d_assoc} "
         str += f"--l1d_size={self._l1d_size}kB "
         str += f"--l1d_assoc={self._l1d_assoc} "
-        str += f"--chacheline_size={self._cacheline_size} "
+        str += f"--cacheline_size={self._cacheline_size} "
         str += f"--l2_cache "
         str += f"--l2_size={self._l2_size}kB "
         str += f"--l2_assoc={self._l2_assoc} "
