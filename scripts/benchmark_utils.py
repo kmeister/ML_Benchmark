@@ -95,7 +95,7 @@ class BenchmarkCommandBuilder:
         str += f"--stats-file={self._stats_filename:s} "
         str += f"--dump-config={self._config_filename:s} "
         str += f"configs/example/se.py "
-        str == f"-c {self._benchmark_path} "
+        str += f"-c {self._benchmark_path} "
         str += f"--caches "
         str += f"--l1i_size={self._l1i_size}kB "
         str += f"--l1i_assoc={self._l1d_assoc} "
@@ -113,21 +113,18 @@ class BenchmarkCommandBuilder:
         return str
 
 
-
-def main():
-    pool = Pool(2)
+def run_commands_async(commands, max_processes = 2):
+    pool = Pool(max_processes)
     manager = Manager()
     queue = manager.Queue()
 
-
     tasks = []
-    for i in range(0, 100):
-        tasks.append(AsyncTask(f"{i} x foo", f"echo {'foo'*i}", queue))
+    for command in commands:
+        tasks.append(AsyncTask(command, command, queue))
 
     pool.map(AsyncTask.execute, tasks)
 
     while not queue.empty():
         print(queue.get())
 
-if __name__ == "__main__":
-    main()
+

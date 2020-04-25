@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/biin/env python3
 """
 MIT License
 
