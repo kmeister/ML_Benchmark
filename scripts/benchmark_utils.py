@@ -36,11 +36,16 @@ class BenchmarkCommandBuilder:
         self._l1d_size = 32
         self._l1d_assoc = 4
         self._cacheline_size = 64
+        self._l2cache = False
         self._l2_size = 1024
         self._l2_assoc = 8
-        self._cpu_type = "MinorCPU"
+        self._cpu_type = "DerivO3CPU"
         self._maxinsts=100000000
         self._benchmark_path= "../ML_Benchmark/Benchmarks/mlbench"
+
+    def set_l2cache(self, value: bool):
+        self._l2cache = value
+        return self
 
     def set_stats_filename(self, value):
         self._stats_filename = value
@@ -102,9 +107,10 @@ class BenchmarkCommandBuilder:
         str += f"--l1d_size={self._l1d_size}kB "
         str += f"--l1d_assoc={self._l1d_assoc} "
         str += f"--cacheline_size={self._cacheline_size} "
-        str += f"--l2cache "
-        str += f"--l2_size={self._l2_size}kB "
-        str += f"--l2_assoc={self._l2_assoc} "
+        if self._l2cache:
+            str += f"--l2cache "
+            str += f"--l2_size={self._l2_size}kB "
+            str += f"--l2_assoc={self._l2_assoc} "
         str += f"--cpu-clock=1.6GHz "
         str += f"--cpu-type={self._cpu_type} "
         str += f" -n 1"
