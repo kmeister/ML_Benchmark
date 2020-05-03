@@ -30,6 +30,6 @@ for assoc in l1_assoc:
         print(bench + "\n\n")
         commands.append(bench)
 
-#run_commands_async(commands, max_processes=3)
+run_commands_async(commands, max_processes=3)
 
 
